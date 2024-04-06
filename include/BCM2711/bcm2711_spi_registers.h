@@ -1,7 +1,6 @@
-
 /*
  * Filename: bcm2711_spi_registers.h
- * Description: Header file containing definitions for BCM2711_SPI_REGISTER.
+ * Description: Header file containing definitions for BCM2711_SPI_REGISTERS.
  * Author: Devontae Reid
  * Date: 2024-04-05
  * License: MIT License
@@ -27,8 +26,8 @@
 
 #include "BCM2711_base_addresses.h"
 
-#ifndef _BCM2711_SPI_REGISTER_H_
-#define _BCM2711_SPI_REGISTER_H_
+#ifndef _BCM2711_SPI_REGISTERS_H_
+#define _BCM2711_SPI_REGISTERS_H_
 
 #define BCM2711_SPI0_CS	        BCM2711_SPI0_BASE_ADDR + 0x00	// SPI Master Control and Status
 #define BCM2711_SPI0_FIFO	    BCM2711_SPI0_BASE_ADDR + 0x04	// SPI Master TX and RX FIFOs
@@ -65,4 +64,4 @@
 #define BCM2711_SPI6_LTOH	    BCM2711_SPI6_BASE_ADDR + 0x10	// SPI LoSSI mode TOH
 #define BCM2711_SPI6_DC	        BCM2711_SPI6_BASE_ADDR + 0x14	// SPI DMA DREQ Controls
     
-#endif // _BCM2711_SPI_REGISTER_H_
+#endif // _BCM2711_SPI_REGISTERS_H_

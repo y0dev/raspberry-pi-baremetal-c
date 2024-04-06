@@ -1,7 +1,6 @@
-
 /*
  * Filename: bcm2711_irq_registers.h
- * Description: Header file containing definitions for BCM2711_IRQ_REGISTER.
+ * Description: Header file containing definitions for BCM2711_IRQ_REGISTERS.
  * Author: Devontae Reid
  * Date: 2024-04-05
  * License: MIT License
@@ -27,8 +26,8 @@
 
 #include "BCM2711_base_addresses.h"
 
-#ifndef _BCM2711_IRQ_REGISTER_H_
-#define _BCM2711_IRQ_REGISTER_H_
+#ifndef _BCM2711_IRQ_REGISTERS_H_
+#define _BCM2711_IRQ_REGISTERS_H_
 
 #define BCM2711_IRQ0_PENDING0	    BCM2711_IRQ_BASE_ADDR + 0x200	// ARM Core 0 IRQ Enabled Interrupt Pending bits [31:0]
 #define BCM2711_IRQ0_PENDING1	    BCM2711_IRQ_BASE_ADDR + 0x204	// ARM Core 0 IRQ Enabled Interrupt pending bits [63:32]
@@ -108,4 +107,4 @@
 #define BCM2711_SWIRQ_SET	        BCM2711_IRQ_BASE_ADDR + 0x3F0	// Write to Set Software Interrupt sources
 #define BCM2711_SWIRQ_CLEAR	        BCM2711_IRQ_BASE_ADDR + 0x3F4	// Write to Clear Software Interrupt sources
     
-#endif // _BCM2711_IRQ_REGISTER_H_
+#endif // _BCM2711_IRQ_REGISTERS_H_

@@ -1,7 +1,6 @@
-
 /*
  * Filename: bcm2711_uart_registers.h
- * Description: Header file containing definitions for BCM2711_UART_REGISTER.
+ * Description: Header file containing definitions for BCM2711_UART_REGISTERS.
  * Author: Devontae Reid
  * Date: 2024-04-05
  * License: MIT License
@@ -27,8 +26,8 @@
 
 #include "BCM2711_base_addresses.h"
 
-#ifndef _BCM2711_UART_REGISTER_H_
-#define _BCM2711_UART_REGISTER_H_
+#ifndef _BCM2711_UART_REGISTERS_H_
+#define _BCM2711_UART_REGISTERS_H_
 
 #define BCM2711_UART0_DR	        BCM2711_UART0_BASE_ADDR + 0x00	// Data Register
 #define BCM2711_UART0_RSRECR	    BCM2711_UART0_BASE_ADDR + 0x04	// 
@@ -125,4 +124,4 @@
 #define BCM2711_UART5_ITOP	        BCM2711_UART5_BASE_ADDR + 0x88	// Integration test output reg
 #define BCM2711_UART5_TDR	        BCM2711_UART5_BASE_ADDR + 0x8C	// Test Data reg
     
-#endif // _BCM2711_UART_REGISTER_H_
+#endif // _BCM2711_UART_REGISTERS_H_

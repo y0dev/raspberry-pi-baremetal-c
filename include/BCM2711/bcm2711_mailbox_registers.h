@@ -1,7 +1,6 @@
-
 /*
  * Filename: bcm2711_mailbox_registers.h
- * Description: Header file containing definitions for BCM2711_MAILBOX_REGISTER.
+ * Description: Header file containing definitions for BCM2711_MAILBOX_REGISTERS.
  * Author: Devontae Reid
  * Date: 2024-04-05
  * License: MIT License
@@ -27,8 +26,8 @@
 
 #include "BCM2711_base_addresses.h"
 
-#ifndef _BCM2711_MAILBOX_REGISTER_H_
-#define _BCM2711_MAILBOX_REGISTER_H_
+#ifndef _BCM2711_MAILBOX_REGISTERS_H_
+#define _BCM2711_MAILBOX_REGISTERS_H_
 
 #define BCM2711_MBOX_SET00      BCM2711_MAILBOX_BASE_ADDR + 0x80	// Mailbox 00 Set Bit Register
 #define BCM2711_MBOX_SET01      BCM2711_MAILBOX_BASE_ADDR + 0x84	// Mailbox 01 Set Bit Register
@@ -63,4 +62,4 @@
 #define BCM2711_MBOX_CLR14      BCM2711_MAILBOX_BASE_ADDR + 0xF8	// Mailbox 14 Clear Bit Register
 #define BCM2711_MBOX_CLR15      BCM2711_MAILBOX_BASE_ADDR + 0xFC	// Mailbox 15 Clear Bit Register
     
-#endif // _BCM2711_MAILBOX_REGISTER_H_
+#endif // _BCM2711_MAILBOX_REGISTERS_H_

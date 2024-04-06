@@ -1,7 +1,6 @@
-
 /*
  * Filename: bcm2711_dma_registers.h
- * Description: Header file containing definitions for BCM2711_DMA_REGISTER.
+ * Description: Header file containing definitions for BCM2711_DMA_REGISTERS.
  * Author: Devontae Reid
  * Date: 2024-04-05
  * License: MIT License
@@ -27,8 +26,8 @@
 
 #include "BCM2711_base_addresses.h"
 
-#ifndef _BCM2711_DMA_REGISTER_H_
-#define _BCM2711_DMA_REGISTER_H_
+#ifndef _BCM2711_DMA_REGISTERS_H_
+#define _BCM2711_DMA_REGISTERS_H_
 
 #define BCM2711_0_CS	        BCM2711_DMA_BASE_ADDR + 0x000	// DMA Channel 0 Control and Status
 #define BCM2711_0_CONBLK_AD	    BCM2711_DMA_BASE_ADDR + 0x004	// DMA Channel 0 Control Block Address
@@ -172,4 +171,4 @@
 #define BCM2711_INT_STATUS	    BCM2711_DMA_BASE_ADDR + 0xFE0	// Interrupt status of each DMA channel
 #define BCM2711_ENABLE	        BCM2711_DMA_BASE_ADDR + 0xFF0	// Global enable bits for each DMA channel
     
-#endif // _BCM2711_DMA_REGISTER_H_
+#endif // _BCM2711_DMA_REGISTERS_H_

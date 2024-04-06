@@ -1,7 +1,6 @@
-
 /*
  * Filename: bcm2711_gpio_registers.h
- * Description: Header file containing definitions for BCM2711_GPIO_REGISTER.
+ * Description: Header file containing definitions for BCM2711_GPIO_REGISTERS.
  * Author: Devontae Reid
  * Date: 2024-04-05
  * License: MIT License
@@ -27,8 +26,8 @@
 
 #include "BCM2711_base_addresses.h"
 
-#ifndef _BCM2711_GPIO_REGISTER_H_
-#define _BCM2711_GPIO_REGISTER_H_
+#ifndef _BCM2711_GPIO_REGISTERS_H_
+#define _BCM2711_GPIO_REGISTERS_H_
 
 #define BCM2711_GPFSEL0	                    BCM2711_GPIO_BASE_ADDR + 0x00	// GPIO Function Select 0
 #define BCM2711_GPFSEL1	                    BCM2711_GPIO_BASE_ADDR + 0x04	// GPIO Function Select 1
@@ -61,4 +60,4 @@
 #define BCM2711_GPIO_PUP_PDN_CNTRL_REG2	    BCM2711_GPIO_BASE_ADDR + 0xEC	// GPIO Pull-up / Pull-down Register 2
 #define BCM2711_GPIO_PUP_PDN_CNTRL_REG3	    BCM2711_GPIO_BASE_ADDR + 0xF0	// GPIO Pull-up / Pull-down Register 3
     
-#endif // _BCM2711_GPIO_REGISTER_H_
+#endif // _BCM2711_GPIO_REGISTERS_H_

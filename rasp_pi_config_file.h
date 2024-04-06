@@ -1,6 +1,6 @@
 /*
- * Filename: bcm2711_timer_registers.h
- * Description: Header file containing definitions for BCM2711_TIMER_REGISTERS.
+ * Filename: rasp_pi_config_file.h
+ * Description: Header file containing configuration for the raspberry pi
  * Author: Devontae Reid
  * Date: 2024-04-05
  * License: MIT License
@@ -24,19 +24,10 @@
  * SOFTWARE.
  */
 
-#include "BCM2711_base_addresses.h"
 
-#ifndef _BCM2711_TIMER_REGISTERS_H_
-#define _BCM2711_TIMER_REGISTERS_H_
+#ifndef _RASP_PI_CONFIG_FILE_H_
+#define _RASP_PI_CONFIG_FILE_H_
 
-#define BCM2711_TIMER_LOAD	        BCM2711_TIMER_BASE_ADDR + 0x400	// Load
-#define BCM2711_TIMER_VALUE	        BCM2711_TIMER_BASE_ADDR + 0x404	// Value (Read-Only)
-#define BCM2711_TIMER_CONTROL	    BCM2711_TIMER_BASE_ADDR + 0x408	// Control
-#define BCM2711_TIMER_IRQCNTL	    BCM2711_TIMER_BASE_ADDR + 0x40C	// IRQ Clear/Ack (Write-Only)
-#define BCM2711_TIMER_RAWIRQ	    BCM2711_TIMER_BASE_ADDR + 0x410	// RAW IRQ (Read-Only)
-#define BCM2711_TIMER_MSKIRQ	    BCM2711_TIMER_BASE_ADDR + 0x414	// Masked IRQ (Read-Only)
-#define BCM2711_TIMER_RELOAD	    BCM2711_TIMER_BASE_ADDR + 0x418	// Reload
-#define BCM2711_TIMER_PREDIV	    BCM2711_TIMER_BASE_ADDR + 0x41C	// Pre-divider (Not in real 804!)
-#define BCM2711_TIMER_FREECNT	    BCM2711_TIMER_BASE_ADDR + 0x420	// Free running counter (Not in real 804!)
-    
-#endif // _BCM2711_TIMER_REGISTERS_H_
+#define RASPBERRY_PI_DEVICE_NAME    "GracefulGadget"
+
+#endif /* _RASP_PI_CONFIG_FILE_H_ */

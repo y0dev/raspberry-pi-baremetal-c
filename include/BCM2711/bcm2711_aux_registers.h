@@ -1,7 +1,6 @@
-
 /*
  * Filename: bcm2711_aux_registers.h
- * Description: Header file containing definitions for BCM2711_AUX_REGISTER.
+ * Description: Header file containing definitions for BCM2711_AUX_REGISTERS.
  * Author: Devontae Reid
  * Date: 2024-04-05
  * License: MIT License
@@ -27,8 +26,8 @@
 
 #include "BCM2711_base_addresses.h"
 
-#ifndef _BCM2711_AUX_REGISTER_H_
-#define _BCM2711_AUX_REGISTER_H_
+#ifndef _BCM2711_AUX_REGISTERS_H_
+#define _BCM2711_AUX_REGISTERS_H_
 
 #define BCM2711_AUX_IRQ	                BCM2711_AUX_BASE_ADDR + 0x00	// Auxiliary Interrupt status
 #define BCM2711_AUX_ENABLES	            BCM2711_AUX_BASE_ADDR + 0x04	// Auxiliary enables
@@ -68,4 +67,4 @@
 #define BCM2711_AUX_SPI2_TXHOLD_REGC	BCM2711_AUX_BASE_ADDR + 0xf8	// SPI 2 Extended Data
 #define BCM2711_AUX_SPI2_TXHOLD_REGD	BCM2711_AUX_BASE_ADDR + 0xfc	// SPI 2 Extended Data
     
-#endif // _BCM2711_AUX_REGISTER_H_
+#endif // _BCM2711_AUX_REGISTERS_H_

@@ -1,7 +1,6 @@
-
 /*
  * Filename: bcm2711_pcm_registers.h
- * Description: Header file containing definitions for BCM2711_PCM_REGISTER.
+ * Description: Header file containing definitions for BCM2711_PCM_REGISTERS.
  * Author: Devontae Reid
  * Date: 2024-04-05
  * License: MIT License
@@ -27,8 +26,8 @@
 
 #include "BCM2711_base_addresses.h"
 
-#ifndef _BCM2711_PCM_REGISTER_H_
-#define _BCM2711_PCM_REGISTER_H_
+#ifndef _BCM2711_PCM_REGISTERS_H_
+#define _BCM2711_PCM_REGISTERS_H_
 
 #define BCM2711_CS_A	    BCM2711_PCM_BASE_ADDR + 0x00	// PCM Control and Status
 #define BCM2711_FIFO_A	    BCM2711_PCM_BASE_ADDR + 0x04	// PCM FIFO Data
@@ -40,4 +39,4 @@
 #define BCM2711_INTSTC_A	BCM2711_PCM_BASE_ADDR + 0x1C	// PCM Interrupt Status & Clear
 #define BCM2711_GRAY	    BCM2711_PCM_BASE_ADDR + 0x20	// PCM Gray Mode Control
     
-#endif // _BCM2711_PCM_REGISTER_H_
+#endif // _BCM2711_PCM_REGISTERS_H_

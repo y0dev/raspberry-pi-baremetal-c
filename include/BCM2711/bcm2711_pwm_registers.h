@@ -1,7 +1,6 @@
-
 /*
  * Filename: bcm2711_pwm_registers.h
- * Description: Header file containing definitions for BCM2711_PWM_REGISTER.
+ * Description: Header file containing definitions for BCM2711_PWM_REGISTERS.
  * Author: Devontae Reid
  * Date: 2024-04-05
  * License: MIT License
@@ -27,8 +26,8 @@
 
 #include "BCM2711_base_addresses.h"
 
-#ifndef _BCM2711_PWM_REGISTER_H_
-#define _BCM2711_PWM_REGISTER_H_
+#ifndef _BCM2711_PWM_REGISTERS_H_
+#define _BCM2711_PWM_REGISTERS_H_
 
 #define BCM2711_PWM0_CTL	    BCM2711_PWM0_BASE_ADDR + 0x00	// PWM Control
 #define BCM2711_PWM0_STA	    BCM2711_PWM0_BASE_ADDR + 0x04	// PWM Status
@@ -48,4 +47,4 @@
 #define BCM2711_PWM1_RNG2	    BCM2711_PWM1_BASE_ADDR + 0x20	// PWM Channel 2 Range
 #define BCM2711_PWM1_DAT2	    BCM2711_PWM1_BASE_ADDR + 0x24	// PWM Channel 2 Data
     
-#endif // _BCM2711_PWM_REGISTER_H_
+#endif // _BCM2711_PWM_REGISTERS_H_

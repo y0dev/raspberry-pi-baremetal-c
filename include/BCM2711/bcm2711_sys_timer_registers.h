@@ -1,7 +1,6 @@
-
 /*
  * Filename: bcm2711_sys_timer_registers.h
- * Description: Header file containing definitions for BCM2711_SYS_TIMER_REGISTER.
+ * Description: Header file containing definitions for BCM2711_SYS_TIMER_REGISTERS.
  * Author: Devontae Reid
  * Date: 2024-04-05
  * License: MIT License
@@ -27,8 +26,8 @@
 
 #include "BCM2711_base_addresses.h"
 
-#ifndef _BCM2711_SYS_TIMER_REGISTER_H_
-#define _BCM2711_SYS_TIMER_REGISTER_H_
+#ifndef _BCM2711_SYS_TIMER_REGISTERS_H_
+#define _BCM2711_SYS_TIMER_REGISTERS_H_
 
 #define BCM2711_SYS_TIMER_CS      BCM2711_SYS_TIMER_BASE_ADDR + 0x00	// System Timer Control/Status
 #define BCM2711_SYS_TIMER_CLO     BCM2711_SYS_TIMER_BASE_ADDR + 0x04	// System Timer Counter Lower 32 bits
@@ -38,4 +37,4 @@
 #define BCM2711_SYS_TIMER_C2      BCM2711_SYS_TIMER_BASE_ADDR + 0x14	// System Timer Compare 2
 #define BCM2711_SYS_TIMER_C3      BCM2711_SYS_TIMER_BASE_ADDR + 0x18	// System Timer Compare 3
     
-#endif // _BCM2711_SYS_TIMER_REGISTER_H_
+#endif // _BCM2711_SYS_TIMER_REGISTERS_H_
