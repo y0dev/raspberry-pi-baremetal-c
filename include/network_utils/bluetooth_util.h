@@ -27,9 +27,9 @@
 #include "rasp_pi_config_file.h"
 #include <bluetooth/bluetooth.h>
 
-#ifndef _BCM2711_PWM_REGISTERS_H_
-#define _BCM2711_PWM_REGISTERS_H_
+#ifndef _BLUETOOTH_UTIL_H_
+#define _BLUETOOTH_UTIL_H_
 
 int setup_bluetooth(bluetooth_device_t *, int , int *);
 
-#endif /* _BCM2711_PWM_REGISTERS_H_ */
+#endif /* _BLUETOOTH_UTIL_H_ */
