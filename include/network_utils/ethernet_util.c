@@ -39,14 +39,12 @@
  * This function creates a TCP socket, binds it to the specified IP address and port,
  * and starts listening for incoming connections.
  *
- * @param[in] eConfig Pointer to the Ethernet configuration containing IP address and port information.
+ * @param[in] eConfig Pointer to the Ethernet configuration containing the connection configuration.
  *
  * @return Returns 0 upon successful initialization, otherwise returns -1.
  */
 static int init_tcp_connection(EthernetConfig* eConfig)
 {
-    struct sockaddr_in server_addr;
-
     // Create TCP socket
     eConfig->tcp_socket = socket(AF_INET, SOCK_STREAM, 0);
     if (eConfig->tcp_socket < 0) {
@@ -55,12 +53,12 @@ static int init_tcp_connection(EthernetConfig* eConfig)
     }
 
     // Initialize server address structure
-    server_addr.sin_family = AF_INET;
-    server_addr.sin_addr.s_addr = inet_addr(eConfig->ip_address);
-    server_addr.sin_port = htons(eConfig->port);
+    eConfig->server_addr.sin_family = AF_INET;
+    eConfig->server_addr.sin_addr.s_addr = inet_addr(eConfig->ip_address);
+    eConfig->server_addr.sin_port = htons(eConfig->port);
 
     // Bind TCP socket
-    if (bind(eConfig->tcp_socket, (struct sockaddr *)&server_addr, sizeof(server_addr)) < 0) {
+    if (bind(eConfig->tcp_socket, (struct sockaddr *)&eConfig->server_addr, sizeof(eConfig->server_addr)) < 0) {
         perror("TCP bind failed");
         return -1;
     }
@@ -81,14 +79,12 @@ static int init_tcp_connection(EthernetConfig* eConfig)
  *
  * This function creates a UDP socket, binds it to the specified IP address and port.
  *
- * @param[in] eConfig Pointer to the Ethernet configuration containing IP address and port information.
+ * @param[in] eConfig Pointer to the Ethernet configuration containing the connection configuration.
  *
  * @return Returns 0 upon successful initialization, otherwise returns -1.
  */
 static int init_udp_connection(EthernetConfig* eConfig)
 {
-    struct sockaddr_in server_addr;
-
     // Create UDP socket
     eConfig->udp_socket = socket(AF_INET, SOCK_DGRAM, 0);
     if (eConfig->udp_socket < 0) {
@@ -97,18 +93,19 @@ static int init_udp_connection(EthernetConfig* eConfig)
     }
 
     // Initialize server address structure
-    server_addr.sin_family = AF_INET;
-    server_addr.sin_addr.s_addr = inet_addr(eConfig->ip_address);
-    server_addr.sin_port = htons(eConfig->port);
+    eConfig->server_addr.sin_family = AF_INET;
+    eConfig->server_addr.sin_addr.s_addr = inet_addr(eConfig->ip_address);
+    eConfig->server_addr.sin_port = htons(eConfig->port);
 
     // Bind UDP socket
-    if (bind(eConfig->udp_socket, (struct sockaddr *)&server_addr, sizeof(server_addr)) < 0) {
+    if (bind(eConfig->udp_socket, (struct sockaddr *)&eConfig->server_addr, sizeof(eConfig->server_addr)) < 0) {
         perror("UDP bind failed");
         return -1;
     }
 
     printf("Server listening on IP: %s, Port: %d\n", eConfig->ip_address, eConfig->port);
 
+    return 0;
 }
 /**
  * @brief Initializes an Ethernet connection based on the provided configuration.
